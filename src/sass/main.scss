@@ -50,7 +50,7 @@ img {
   background-color: #dde3dd;
   color: black;
   box-shadow: 3px 6px 6px #0006ff;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .search::placeholder {
@@ -64,27 +64,24 @@ img {
   border: 3px solid #dde3dd;
   background-color: #dde3dd;
   box-shadow: 3px 6px 6px #fffe00;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .submit-push:hover {
-  transition: 2s;
+  transition: 0.5s;
   cursor: pointer;
   box-shadow: 0px 3px 35px 3px #1900ff;
 }
 
 .search:hover {
-  transition: 2s;
+  transition: 0.5s;
   box-shadow: 0px 3px 35px 3px #fffe00;
 }
 
-
-.coctail-text{
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 35px;
-	font-weight: 600;
-	color: brown;
-	letter-spacing: 0.5rem;
-	
-
+.coctail-text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: brown;
+  letter-spacing: 0.5rem;
 }

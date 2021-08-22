@@ -1,4 +1,5 @@
 import "./sass/main.scss";
+import axios from "axios";
 
 const refs = {
   form: document.querySelector("#form"),
@@ -6,16 +7,30 @@ const refs = {
   container: document.querySelector(".container"),
 };
 
+// const hendlerSubmit = (e) => {
+//   clear();
+//   e.preventDefault();
+//   const value = refs.input.value;
+//   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+//     .then((response) => response.json())
+//     .then((coctails) => renderColection(coctails.drinks))
+//     .catch((err) => console.log(err));
+// };
+
+// ===axios
+
 const hendlerSubmit = (e) => {
-  clear();
   e.preventDefault();
+  clear();
 
   const value = refs.input.value;
-  fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
-    .then((response) => response.json())
-    .then((coctails) => renderColection(coctails.drinks))
+  axios
+    .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+    .then((result) => renderCollection(result.data.drinks))
     .catch((err) => console.log(err));
 };
+
+// ===axios end
 
 function createItem({ strDrinkThumb, strDrink }) {
   const article = `
@@ -28,7 +43,7 @@ function createItem({ strDrinkThumb, strDrink }) {
   refs.container.insertAdjacentHTML("beforeend", article);
 }
 
-function renderColection(arr) {
+function renderCollection(arr) {
   arr.forEach((el) => createItem(el));
 }
 
