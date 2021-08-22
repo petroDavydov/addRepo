@@ -7,8 +7,7 @@ const refs = {
 };
 
 const hendlerSubmit = (e) => {
-
-	clear()
+  clear();
   e.preventDefault();
 
   const value = refs.input.value;
@@ -22,7 +21,7 @@ function createItem({ strDrinkThumb, strDrink }) {
   const article = `
 <article>
 <img src="${strDrinkThumb}" alt= "${strDrink} width='700" height='700'>
-<p>${strDrink}</p>
+<p class="coctail-text">${strDrink}</p>
 </article>
 `;
 
@@ -33,10 +32,9 @@ function renderColection(arr) {
   arr.forEach((el) => createItem(el));
 }
 
-function clear(){
-	refs.input.innerHTML=''
-	refs.container.innerHTML=''
-	
+function clear() {
+  refs.input.innerHTML = "";
+  refs.container.innerHTML = "";
 }
 
 refs.form.addEventListener("submit", hendlerSubmit);

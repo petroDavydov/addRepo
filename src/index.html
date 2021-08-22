@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>"Cocktails by webinar"</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -14,8 +14,14 @@
   <body>
     <div id="root">
       <form id="form">
-        <input type="text" name="coctailName" id="search" />
-        <button type="submit">Search</button>
+        <input
+          type="text"
+          name="coctailName"
+          id="search"
+          class="search"
+          placeholder="Enter the name of cocktail"
+        />
+        <button type="submit" class="submit-push">Search</button>
       </form>
       <div class="container"></div>
     </div>
